@@ -5,7 +5,7 @@ import './TodoList.css'
 import { connect } from 'react-redux';
 import { removeTodo } from '../storage/actions';
 
-const TodoList = ({ todos = [], onRemovedPressed }) => (
+const TodoList = ({ todos = [], onRemovedPressed, onMarkCompleted }) => (
 <div className="list-wrapper">
     <NewTodoForm />
     {todos.map((todo, index) => (
@@ -13,6 +13,7 @@ const TodoList = ({ todos = [], onRemovedPressed }) => (
         key={index} 
         todo={todo} 
         onRemovedPressed={onRemovedPressed}
+        onMarkCompleted={onMarkCompleted}
         />
     ))} 
 </div>
