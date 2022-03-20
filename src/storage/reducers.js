@@ -19,7 +19,8 @@ export const todos = (state = [], action) => {
 
         case MARK_COMPLETED: {
             const { text } = payload;
-            return state(todo => todo.text = 'text-decoration-line: line-through');
+            //return<h3 style="text-decoration-line: line-through">{text}</h3>
+            return (todo => todo.text.style  = 'text-decoration-line: line-through');
         }
         default: {
             return state;
